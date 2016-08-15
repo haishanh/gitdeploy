@@ -1,6 +1,7 @@
 var spawnSync = require('child_process').spawnSync;
+var path = require('path');
 
-var cmd = 'lib/deploy';
+var cmd = path.resolve(__dirname, 'lib', 'deploy');
 
 function deploy(opt) {
   if (opt && opt.directory && opt.remote && opt.branch)  {
